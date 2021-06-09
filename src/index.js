@@ -1,14 +1,14 @@
 "use strict"; 
 
 const body = document.body;
-const bgColorsBody = ["#ffb457", "#ff96bd", "#9999fb", "#ffe797", "#cffff1"];
+const bgColorsBody = ["#ffb457", "#4343f5", "#f54888", "#ffe797", "#cffff1"];
 const menu = body.querySelector(".menu");
 const menuItems = menu.querySelectorAll(".menu__item");
+const menuContent = document.querySelector(".content").children;
 const menuBorder = menu.querySelector(".menu__border");
 let activeItem = menu.querySelector(".active");
 
 function clickItem(item, index) {
-
     menu.style.removeProperty("--timeOut");
     
     if (activeItem == item) return;
@@ -23,7 +23,10 @@ function clickItem(item, index) {
     activeItem = item;
     offsetMenuBorder(activeItem, menuBorder);
     
-    
+    for(let i = 0; i < menuContent.length; i++){
+        menuContent[i].style.display = "none";
+    }
+    menuContent[index].style.display = "block";
 }
 
 function offsetMenuBorder(element, menuBorder) {
