@@ -1,7 +1,5 @@
-"use strict"; 
-
 const body = document.body;
-const bgColorsBody = ["#ffb457", "#4343f5", "#f54888", "#ffe797", "#cffff1"];
+const bgColorsBody = ["#74ee15", "#f000ff", "#001eff"];
 const menu = body.querySelector(".menu");
 const menuItems = menu.querySelectorAll(".menu__item");
 const menuContent = document.querySelector(".content").children;
@@ -19,7 +17,6 @@ function clickItem(item, index) {
 
     
     item.classList.add("active");
-    body.style.backgroundColor = bgColorsBody[index];
     activeItem = item;
     offsetMenuBorder(activeItem, menuBorder);
     
@@ -27,6 +24,7 @@ function clickItem(item, index) {
         menuContent[i].style.display = "none";
     }
     menuContent[index].style.display = "block";
+    menuContent[index].style.color = bgColorsBody[index];
 }
 
 function offsetMenuBorder(element, menuBorder) {
