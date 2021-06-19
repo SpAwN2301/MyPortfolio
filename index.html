@@ -8,59 +8,80 @@
     <title>Portfolio</title>
 </head>
 <body>
+  <header class="header">
+    <menu class="menu">
+      <button class="menu__item active" style="--bgColorItem: #74ee15;">
+        <svg class="icon" viewBox="0 0 64 64">
+          <path stroke-width="3" fill="none" d="M40.6 49.2C32.5 47.6 32 45.6 32 44v-2a14.1 14.1 0 0 0 4-7c2.5 0 4-3 4-6 0-.8 0-4-2-4 5-14.5-9.6-20-20-13-4.4 0-5.6 6.6-4 13-2 0-2 3.2-2 4 0 3 1.5 6 4 6a14.2 14.2 0 0 0 4 7v2c0 1.6-.5 3.6-8.6 5.2S2 58 2 58h48s0-6.9-9.4-8.8z" />
+          <path stroke-width="3" fill="none" d="M46 22h16m-16-8h16M42 6h20" />
+        </svg>
+      </button>
+    
+      <button class="menu__item" style="--bgColorItem: #f000ff;">
+        <svg class="icon" viewBox="0 0 24 24">
+          <path d="M3.4,11.9l8.8,4.4l8.4-4.4" />
+          <path d="M3.4,16.2l8.8,4.5l8.4-4.5" />
+          <path d="M3.7,7.8l8.6-4.5l8,4.5l-8,4.3L3.7,7.8z" />
+        </svg>
+      </button>
+
+      <button class="menu__item" style="--bgColorItem: #001eff;">
+        <svg class="icon" viewBox="0 0 64 64">
+          <path stroke-width="3" d="M54 33.6V2H10v31.6M18 12h10m-4 8h22m-28 8h28" />
+          <path stroke-width="3" d="M42.08 41.944L62 28M2 28l19.92 13.944M2 62l20.929-21.071c3.905-3.9 14.237-3.9 18.143 0L62 62" />
+          <path stroke-width="3" d="M54 21.063L62 28v34H2V28l8-6.937" />
+        </svg>
+      </button>
+    
+      <div class="menu__border"></div>
+    </menu>
+  </header>
+        
+  <div class="svg-container">
+    <svg viewBox="0 0 202.9 45.5">
+        <clipPath id="menu" clipPathUnits="objectBoundingBox" transform="scale(0.0049285362247413 0.021978021978022)">
+        <path d="M6.7,45.5c5.7,0.1,14.1-0.4,23.3-4c5.7-2.3,9.9-5,18.1-10.5c10.7-7.1,11.8-9.2,20.6-14.3c5-2.9,9.2-5.2,15.2-7
+            c7.1-2.1,13.3-2.3,17.6-2.1c4.2-0.2,10.5,0.1,17.6,2.1c6.1,1.8,10.2,4.1,15.2,7c8.8,5,9.9,7.1,20.6,14.3c8.3,5.5,12.4,8.2,18.1,10.5
+            c9.2,3.6,17.6,4.2,23.3,4H6.7z" />
+        </clipPath>
+    </svg>
+  </div>
+
   <section class="content">
     <div class="about active">
-      it's me
+      <h1 class="about__title">about</h1>
+      <div class="about__descrip">
+        Я начинающий Front-end разработчик. <br><br>
+        Все свои проекты пишу на чистом JS, также знаком со Vue и основами React.
+        Всегда готов к профессиональному развитию и поиском новых идей, улучшающих как визуальную составляющую сайта, так и функциональную.
+      </div>
+      <h1 class="about__title">/about</h1>
     </div>
 
-    <div class="myProjects">
-      this is my project
-    </div>
+    <ul class="myProjects">
+      <h1 class="myProjects__title">my projects</h1>
+      <li class="myProject">
+        <div class="myProject__title">Smart Orders</div>
+        <div class="myProject__descrip">Website for mobile devices for quick ordering in restaurants and catering places.</div>
+        <a href="#" class="myProject__link">Go to Website</a>
+      </li>
 
-    <div class="contact">
+      <li class="myProject">
+        <div class="myProject__title">Uber</div>
+        <div class="myProject__descrip">This is my first project</div>
+        <a href="#" class="myProject__link">Go to Website</a>
+      </li>
+      <h1 class="myProjects__title">/my projects</h1>
+    </ul>
+
+
+    <div class="contacts">
+      <h1 class="contacts__title">contacts</h1>
       contact
+      <h1 class="contacts__title">/contacts</h1>
     </div>
   </section>
 
-  <section class="footer">
-      <menu class="menu">
-          <button class="menu__item active" style="--bgColorItem: #ff8c00;">
-            <svg class="icon" viewBox="0 0 64 64">
-							<path stroke-width="3" fill="none" d="M40.6 49.2C32.5 47.6 32 45.6 32 44v-2a14.1 14.1 0 0 0 4-7c2.5 0 4-3 4-6 0-.8 0-4-2-4 5-14.5-9.6-20-20-13-4.4 0-5.6 6.6-4 13-2 0-2 3.2-2 4 0 3 1.5 6 4 6a14.2 14.2 0 0 0 4 7v2c0 1.6-.5 3.6-8.6 5.2S2 58 2 58h48s0-6.9-9.4-8.8z" />
-              <path stroke-width="3" fill="none" d="M46 22h16m-16-8h16M42 6h20" />
-            </svg>
-          </button>
-        
-          <button class="menu__item" style="--bgColorItem: #4343f5;">
-            <svg class="icon" viewBox="0 0 24 24">
-              <path d="M3.4,11.9l8.8,4.4l8.4-4.4" />
-              <path d="M3.4,16.2l8.8,4.5l8.4-4.5" />
-              <path d="M3.7,7.8l8.6-4.5l8,4.5l-8,4.3L3.7,7.8z" />
-            </svg>
-          </button>
-
-          <button class="menu__item" style="--bgColorItem: #f54888;">
-            <svg class="icon" viewBox="0 0 64 64">
-              <path stroke-width="3" d="M54 33.6V2H10v31.6M18 12h10m-4 8h22m-28 8h28" />
-              <path stroke-width="3" d="M42.08 41.944L62 28M2 28l19.92 13.944M2 62l20.929-21.071c3.905-3.9 14.237-3.9 18.143 0L62 62" />
-              <path stroke-width="3" d="M54 21.063L62 28v34H2V28l8-6.937" />
-            </svg>
-          </button>
-        
-          <div class="menu__border"></div>
-        
-      </menu>
-  </section>
-      
-    <div class="svg-container">
-      <svg viewBox="0 0 202.9 45.5">
-          <clipPath id="menu" clipPathUnits="objectBoundingBox" transform="scale(0.0049285362247413 0.021978021978022)">
-          <path d="M6.7,45.5c5.7,0.1,14.1-0.4,23.3-4c5.7-2.3,9.9-5,18.1-10.5c10.7-7.1,11.8-9.2,20.6-14.3c5-2.9,9.2-5.2,15.2-7
-              c7.1-2.1,13.3-2.3,17.6-2.1c4.2-0.2,10.5,0.1,17.6,2.1c6.1,1.8,10.2,4.1,15.2,7c8.8,5,9.9,7.1,20.6,14.3c8.3,5.5,12.4,8.2,18.1,10.5
-              c9.2,3.6,17.6,4.2,23.3,4H6.7z" />
-          </clipPath>
-      </svg>
-    </div>
-    <script src="index.js"></script>
+  <script src="index.js"></script>
 </body>
 </html>
