@@ -18,6 +18,21 @@ body {
     background-color: #0c0c0c;
 }
 
+body::-webkit-scrollbar {
+    display: none;
+    width: 10px;
+}
+body::-webkit-scrollbar-button {
+    display: none;
+}
+body::-webkit-scrollbar-track-piece {
+    background-color: transparent;
+}
+body::-webkit-scrollbar-thumb {
+    border-radius: 50px;
+    background-color: red;
+}
+
 .content > * {
     display: none;
 }
@@ -118,12 +133,6 @@ body {
     height: 0;
 }
   
-@media screen and (max-width: 768px) {
-    .menu {
-      font-size: 0.8em;
-    }
-}
-  
 .content {
     min-height: 105vh;
     color: #74ee15;
@@ -218,6 +227,10 @@ body {
 }
 
 @media screen and (max-width: 768px) {
+    .menu {
+        font-size: 0.8em;
+    }
+
     .myProject .myProject__title {
         font-size: 17px;
     }
