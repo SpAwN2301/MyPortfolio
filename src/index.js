@@ -4,10 +4,18 @@ const menu          = body.querySelector(".menu");
 const menuItems     = menu.querySelectorAll(".menu__item");
 const menuContent   = document.querySelector(".content").children;
 const menuBorder    = menu.querySelector(".menu__border");
-let projects        = document.getElementById('projects');
+const projects      = document.getElementById('projects');
 let activeItem      = menu.querySelector(".active");
 
-const projectsArr = [
+const animArr = [
+    'animate__animated', 
+    'animate__fadeIn', 
+    'animate__fadeInLeft', 
+    'animate__fadeInRight'
+];
+
+let previousScreen  = 0;
+const projectsArr   = [
     {
         name:           'Smart Orders',
         description:    'Сервис для быстрого оформления заказа в местах общепита и ресторанах. Всё, что нужно пользователю — это отсканировать QR код своего столика и выбрать предпочитаемые блюда из меню. Меню формируется на основе Гугл таблиц, что позволяет работникам легко и удобно управлять его содержимым. Оформленный заказ моментально попадает в базу данных и на экраны персонала, доступ к которому есть только у авторизованных работников заведения.'
@@ -45,6 +53,8 @@ function projectsRender() {
 }
 
 function clickItem(item, index) {
+    jumpAnim(previousScreen, index);
+
     menu.style.removeProperty("--timeOut");
     
     if (activeItem == item) return;
@@ -86,3 +96,22 @@ window.addEventListener("resize", () => {
     offsetMenuBorder(activeItem, menuBorder);
     menu.style.setProperty("--timeOut", "none");
 });
+
+function jumpAnim(previousView, currentView) {
+    menuContent[currentView].classList.remove(...animArr);
+    menuContent[currentView].classList.remove(...animArr);
+    menuContent[currentView].classList.remove(...animArr);
+
+    if(previousView == currentView) {
+        menuContent[currentView].classList.add('animate__animated', 'animate__fadeIn');
+    }
+    if(previousView < currentView) {
+        menuContent[currentView].classList.add('animate__animated', 'animate__fadeInRight');
+    }
+    if(previousView > currentView) {
+        menuContent[currentView].classList.add('animate__animated', 'animate__fadeInLeft');
+    }
+    console.log(previousScreen, currentView)
+
+    previousScreen = currentView;
+};
