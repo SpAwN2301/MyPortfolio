@@ -1,32 +1,32 @@
-const body = document.body;
-const bgColorsBody = ["#74ee15", "#f000ff", "#001eff"];
-const menu = body.querySelector(".menu");
-const menuItems = menu.querySelectorAll(".menu__item");
-const menuContent = document.querySelector(".content").children;
-const menuBorder = menu.querySelector(".menu__border");
-let projects = document.getElementById('projects');
-let activeItem = menu.querySelector(".active");
+const body          = document.body;
+const bgColorsBody  = ["#74ee15", "#f000ff", "#001eff"];
+const menu          = body.querySelector(".menu");
+const menuItems     = menu.querySelectorAll(".menu__item");
+const menuContent   = document.querySelector(".content").children;
+const menuBorder    = menu.querySelector(".menu__border");
+let projects        = document.getElementById('projects');
+let activeItem      = menu.querySelector(".active");
 
 const projectsArr = [
     {
-        name: 'Smart Orders',
-        description: 'Сервис для быстрого оформления заказа в местах общепита и ресторанах. Всё, что нужно пользователю — это отсканировать QR код своего столика и выбрать предпочитаемые блюда из меню. Меню формируется на основе Гугл таблиц, что позволяет работникам легко и удобно управлять его содержимым. Оформленный заказ моментально попадает в базу данных и на экраны персонала, доступ к которому есть только у авторизованных работников заведения.'
+        name:           'Smart Orders',
+        description:    'Сервис для быстрого оформления заказа в местах общепита и ресторанах. Всё, что нужно пользователю — это отсканировать QR код своего столика и выбрать предпочитаемые блюда из меню. Меню формируется на основе Гугл таблиц, что позволяет работникам легко и удобно управлять его содержимым. Оформленный заказ моментально попадает в базу данных и на экраны персонала, доступ к которому есть только у авторизованных работников заведения.'
     },
     {
-        name: 'MyPortfolio',
-        description: 'Немного рекурсии :)'
+        name:           'MyPortfolio',
+        description:    'Немного рекурсии :)'
     },
     {
-        name: 'TestPayment',
-        description: 'Тестовое задание — Форма оформления заказа.'
+        name:           'TestPayment',
+        description:    'Тестовое задание — Форма оформления заказа.'
     },
     {
-        name: 'TestCalculator',
-        description: 'Тестовое задание — Калькулятор для расчета стоимости натяжных потолков с установкой.'
+        name:           'TestCalculator',
+        description:    'Тестовое задание — Калькулятор для расчета стоимости натяжных потолков с установкой.'
     },
     {
-        name: 'Uber',
-        description: 'Мой первый проект'
+        name:           'Uber',
+        description:    'Мой первый проект'
     },
 ]
 
@@ -62,13 +62,14 @@ function clickItem(item, index) {
         menuContent[i].style.display = "none";
     }
     menuContent[index].style.display = "block";
-    menuContent[index].style.color = bgColorsBody[index];
+    menuContent[index].style.color   = bgColorsBody[index];
 }
 
 function offsetMenuBorder(element, menuBorder) {
 
     const offsetActiveItem = element.getBoundingClientRect();
-    const left = Math.floor(offsetActiveItem.left - menu.offsetLeft - (menuBorder.offsetWidth  - offsetActiveItem.width) / 2) +  "px";
+    const left             = Math.floor(offsetActiveItem.left - menu.offsetLeft - (menuBorder.offsetWidth  - offsetActiveItem.width) / 2) +  "px";
+
     menuBorder.style.transform = `translate3d(${left}, 0 , 0)`;
 
 }
