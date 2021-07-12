@@ -219,7 +219,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .contacts .contacts__descrip {
-    margin-bottom: 5px;
+    margin-bottom: 1em;
 
     font-size: 24px;
     text-align: justify;
@@ -256,6 +256,10 @@ body::-webkit-scrollbar-thumb {
 
     .myProject .myProject__link {
         font-size: 14px;
+    }
+
+    .contacts .contacts__descrip {
+        font-size: 20px;
     }
 }
 
