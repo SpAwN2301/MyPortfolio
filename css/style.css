@@ -135,6 +135,7 @@ body::-webkit-scrollbar-thumb {
 }
   
 .content {
+    overflow-x: hidden;
     color: #74ee15;
     padding: 40px;
 }
@@ -317,10 +318,6 @@ body::-webkit-scrollbar-thumb {
     animation-name: fadeInLeft;
     animation-duration: 1s;
 }
-
-
-
-
 
 
   
