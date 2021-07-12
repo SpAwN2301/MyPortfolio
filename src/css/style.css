@@ -33,13 +33,6 @@ body::-webkit-scrollbar-thumb {
     background-color: red;
 }
 
-.content > * {
-    display: none;
-}
-.content > .active {
-    display: block;
-}
-
 .header {
    position: fixed;
    bottom: 0;
@@ -132,11 +125,40 @@ body::-webkit-scrollbar-thumb {
     width: 0;
     height: 0;
 }
+
+.content > * {
+    display: none;
+}
+.content > .active {
+    display: block;
+}
   
 .content {
-    min-height: 105vh;
     color: #74ee15;
     padding: 40px;
+}
+
+.content .title:first-child {
+    margin-bottom: 20px;
+}
+
+.content .title:last-child {
+    margin-top: 20px;
+}
+
+.content .title, .content .title::before, .content .title::after {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.content .title::before {
+    content: '<';
+    display: inline-block;
+}
+
+.content .title::after {
+    content: '>';
+    display: inline-block;
 }
 
 .about .about__descrip {
@@ -146,17 +168,11 @@ body::-webkit-scrollbar-thumb {
     color: whitesmoke;
 }
 
-.about .about__title::before {
-    content: '<';
-    display: inline-block;
+.projects-wrapper {
+    padding-bottom: 65px;
 }
 
-.about .about__title::after {
-    content: '>';
-    display: inline-block;
-}
-
-.content .myProjects {
+.myProjects {
     padding: 0;
     list-style-type: none;
 }
@@ -195,35 +211,32 @@ body::-webkit-scrollbar-thumb {
     color: #c22085;
 }
 
-.content .myProjects .myProjects__title::before {
-    content: '<';
-    display: inline-block;
+.myProjects__title {
+    font-size: 32px;
+    font-weight: bold;
 }
 
-.content .myProjects .myProjects__title::after {
-    content: '>';
-    display: inline-block;
-}
+.contacts .contacts__descrip {
+    margin-bottom: 5px;
 
-.contacts .contacts__mail {
     font-size: 24px;
     text-align: justify;
     font-style: italic;
     color: whitesmoke;
 }
 
-.contacts .contacts__mail span {
+.contacts .contacts__descrip a {
+    transition: .5s color;
+    color: white;
+}
+
+.contacts .contacts__descrip a:hover {
+    transition: .5s color;
+    color: #0C5FE8;
+}
+
+.contacts .contacts__descrip span {
     text-decoration: underline;
-}
-
-.content .contacts .contacts__title::before {
-    content: '<';
-    display: inline-block;
-}
-
-.content .contacts .contacts__title::after {
-    content: '>';
-    display: inline-block;
 }
 
 @media screen and (max-width: 768px) {
