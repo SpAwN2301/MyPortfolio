@@ -32,7 +32,7 @@ const projectsArr = [
 
 projectsRender();
 
-function projectsRender(){
+function projectsRender() {
     for(let i = 0; i < projectsArr.length; i++){
         projects.innerHTML += `
         <li class="myProject">
