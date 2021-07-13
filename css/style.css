@@ -20,17 +20,6 @@ body {
 
 body::-webkit-scrollbar {
     display: none;
-    width: 10px;
-}
-body::-webkit-scrollbar-button {
-    display: none;
-}
-body::-webkit-scrollbar-track-piece {
-    background-color: transparent;
-}
-body::-webkit-scrollbar-thumb {
-    border-radius: 50px;
-    background-color: red;
 }
 
 .header {
@@ -137,7 +126,7 @@ body::-webkit-scrollbar-thumb {
 .content {
     overflow-x: hidden;
     color: #74ee15;
-    padding: 40px;
+    padding: 40px 40px 150px 40px;
 }
 
 .content .title:first-child {
@@ -148,7 +137,8 @@ body::-webkit-scrollbar-thumb {
     margin-top: 20px;
 }
 
-.content .title, .content .title::before, .content .title::after {
+.content .title, .content .title::before, 
+.content .title::after {
     font-size: 32px;
     font-weight: bold;
 }
@@ -168,10 +158,6 @@ body::-webkit-scrollbar-thumb {
     text-align: justify;
     font-style: italic;
     color: whitesmoke;
-}
-
-.projects-wrapper {
-    padding-bottom: 65px;
 }
 
 .myProjects {
@@ -244,6 +230,10 @@ body::-webkit-scrollbar-thumb {
 @media screen and (max-width: 768px) {
     .menu {
         font-size: 0.8em;
+    }
+
+    .content {
+        padding-bottom: 90px;
     }
 
     .myProject .myProject__title {
