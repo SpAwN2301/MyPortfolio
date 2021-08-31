@@ -22,7 +22,11 @@ const projectsArr   = [
     },
     {
         name:           'Video Conference',
-        description:    'Тестовое задание Blackwall '
+        description:    'Тестовое задание Blackwall. '
+    },
+    {
+        name:           'Yamaguchi',
+        description:    'Тестовое задание Yamaguchi.'
     },
     {
         name:           'OnPoint',
